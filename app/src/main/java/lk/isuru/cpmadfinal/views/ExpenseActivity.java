@@ -24,6 +24,7 @@ import lk.isuru.cpmadfinal.R;
 import lk.isuru.cpmadfinal.adapters.ExpenseAdapter;
 import lk.isuru.cpmadfinal.models.Expense;
 import lk.isuru.cpmadfinal.utils.DBHelper;
+import lk.isuru.cpmadfinal.utils.DialogUtils;
 import lk.isuru.cpmadfinal.utils.GlobalClass;
 
 public class ExpenseActivity extends AppCompatActivity {
@@ -50,8 +51,7 @@ public class ExpenseActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                DialogUtils.showExpenseManageDialog(DialogUtils.MODE_ADD,ExpenseActivity.this,null);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
