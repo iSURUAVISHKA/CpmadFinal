@@ -110,7 +110,7 @@
                 android:layout_marginTop="@dimen/text_input_distance"
                 android:layout_weight="1"
                 android:hint="@string/course"
-                android:inputType="number" />
+                android:inputType="text" />
 
         </LinearLayout>
 
