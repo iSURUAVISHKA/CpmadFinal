@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <AutoCompleteTextView
+        android:id="@+id/txtDialogExpenseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_input_distance"
+        android:hint="@string/type"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/txtDialogExpenseDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/layout_margin_dialog_start_end"
+        android:layout_marginStart="@dimen/layout_margin_dialog_start_end"
+        android:layout_marginTop="@dimen/text_input_distance"
+        android:gravity="top"
+        android:hint="@string/expense_description"
+        android:lines="3" />
+
+
+    <EditText
+        android:id="@+id/txtDialogExpenseValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/layout_margin_dialog_start_end"
+        android:layout_marginStart="@dimen/layout_margin_dialog_start_end"
+        android:layout_marginTop="@dimen/text_input_distance"
+        android:inputType="numberDecimal"
+        android:hint="@string/value" />
+</LinearLayout>

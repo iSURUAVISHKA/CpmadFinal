@@ -32,4 +32,7 @@
     <string name="login_keep_logged_in">Keep me logged in</string>
     <string name="error_login_logged_in">Username or Password changed. Please log in again</string>
     <string name="title_activity_expense">ExpenseActivity</string>
+    <string name="type">Type</string>
+    <string name="expense_description">Description</string>
+    <string name="value">Value</string>
 </resources>

@@ -12,10 +12,12 @@ public class Expense {
     public Expense() {
     }
 
-    public Expense(String type, String value, String description) {
+    public Expense(String type, String value, String description, Long published, String userKey) {
         this.type = type;
         this.value = value;
         this.description = description;
+        this.published = published;
+        this.userKey = userKey;
     }
 
     public Expense setKey(String key){
