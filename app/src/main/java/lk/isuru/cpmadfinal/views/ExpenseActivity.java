@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.views;
+package lk.isuru.cpmadfinal.views;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,11 +20,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import lk.nirmalcode.cpmadfinal.R;
-import lk.nirmalcode.cpmadfinal.adapters.ExpenseAdapter;
-import lk.nirmalcode.cpmadfinal.models.Expense;
-import lk.nirmalcode.cpmadfinal.utils.DBHelper;
-import lk.nirmalcode.cpmadfinal.utils.GlobalClass;
+import lk.isuru.cpmadfinal.R;
+import lk.isuru.cpmadfinal.adapters.ExpenseAdapter;
+import lk.isuru.cpmadfinal.models.Expense;
+import lk.isuru.cpmadfinal.utils.DBHelper;
+import lk.isuru.cpmadfinal.utils.GlobalClass;
 
 public class ExpenseActivity extends AppCompatActivity {
 
@@ -41,6 +41,10 @@ public class ExpenseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_expense);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        globalClass = (GlobalClass) this.getApplication();
+        dbHelper = new DBHelper();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.utils;
+package lk.isuru.cpmadfinal.utils;
 
 import android.content.Context;
 import android.text.format.DateUtils;

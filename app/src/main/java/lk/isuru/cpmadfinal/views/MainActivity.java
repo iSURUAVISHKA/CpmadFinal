@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.views;
+package lk.isuru.cpmadfinal.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import lk.nirmalcode.cpmadfinal.R;
-import lk.nirmalcode.cpmadfinal.utils.DBHelper;
-import lk.nirmalcode.cpmadfinal.utils.GlobalClass;
+import lk.isuru.cpmadfinal.R;
+import lk.isuru.cpmadfinal.utils.DBHelper;
+import lk.isuru.cpmadfinal.utils.GlobalClass;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

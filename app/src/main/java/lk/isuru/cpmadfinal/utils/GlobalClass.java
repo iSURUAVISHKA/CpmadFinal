@@ -1,8 +1,8 @@
-package lk.nirmalcode.cpmadfinal.utils;
+package lk.isuru.cpmadfinal.utils;
 
 import android.app.Application;
 
-import lk.nirmalcode.cpmadfinal.models.Staff;
+import lk.isuru.cpmadfinal.models.Staff;
 
 public class GlobalClass extends Application {
 

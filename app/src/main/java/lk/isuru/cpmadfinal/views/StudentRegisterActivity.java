@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.views;
+package lk.isuru.cpmadfinal.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import lk.nirmalcode.cpmadfinal.R;
-import lk.nirmalcode.cpmadfinal.models.Staff;
-import lk.nirmalcode.cpmadfinal.utils.DBHelper;
-import lk.nirmalcode.cpmadfinal.utils.GlobalClass;
-import lk.nirmalcode.cpmadfinal.utils.Validations;
+import lk.isuru.cpmadfinal.R;
+import lk.isuru.cpmadfinal.models.Student;
+import lk.isuru.cpmadfinal.utils.DBHelper;
+import lk.isuru.cpmadfinal.utils.GlobalClass;
+import lk.isuru.cpmadfinal.utils.Validations;
+import lk.isuru.cpmadfinal.views.MainActivity;
 
 public class StudentRegisterActivity extends AppCompatActivity {
 
@@ -30,9 +31,11 @@ public class StudentRegisterActivity extends AppCompatActivity {
 
         final TextInputEditText txtRegisterUsername = findViewById(R.id.txtRegisterUsername);
         final TextInputEditText txtRegisterName = findViewById(R.id.txtRegisterName);
-        final TextInputEditText txtRegisterPassword = findViewById(R.id.txtRegisterPassword);
-        final TextInputEditText txtRegisterCPassword = findViewById(R.id.txtRegisterCPassword);
         final TextInputEditText txtRegisterEmail = findViewById(R.id.txtRegisterEmail);
+        final TextInputEditText txtRegisterYear = findViewById(R.id.txtRegisterYear);
+        final TextInputEditText txtRegisterFaculty = findViewById(R.id.txtRegisterFaculty);
+        final TextInputEditText txtRegisterBatch = findViewById(R.id.txtRegisterBatch);
+        final TextInputEditText txtRegisterCourse = findViewById(R.id.txtRegisterCourse);
         final TextInputEditText txtRegisterContact = findViewById(R.id.txtRegisterContact);
 
         Button btnRegister = findViewById(R.id.btnRegister);
@@ -42,27 +45,18 @@ public class StudentRegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String username = txtRegisterUsername.getText().toString();
                 String name = txtRegisterName.getText().toString();
-                String password = txtRegisterPassword.getText().toString();
-                String cpassword = txtRegisterCPassword.getText().toString();
                 String email = txtRegisterEmail.getText().toString();
+                String year = txtRegisterYear.getText().toString();
+                String faculty = txtRegisterFaculty.getText().toString();
+                String batch = txtRegisterBatch.getText().toString();
+                String course = txtRegisterCourse.getText().toString();
                 String contact = txtRegisterContact.getText().toString();
 
-                int status = Validations.validateUsername(username);
+                int status ;
                 boolean validEmail;
                 boolean validName;
-                boolean validUsername;
                 boolean validPassword;
                 boolean validYear;
-
-                if (status == Validations.ERR_EMPTY) {
-                    validUsername = false;
-                    txtRegisterUsername.setError(getString(R.string.error_username_empty));
-                } else if (status == Validations.ERR_INVALID) {
-                    validUsername = false;
-                    txtRegisterUsername.setError(getString(R.string.error_username));
-                } else {
-                    validUsername = true;
-                }
 
                 status = Validations.validateEmail(email);
                 if (status == Validations.ERR_EMPTY) {
@@ -75,28 +69,22 @@ public class StudentRegisterActivity extends AppCompatActivity {
                     validEmail = true;
                 }
 
-                status = Validations.validatePassword(password, cpassword);
-                if (status == Validations.ERR_EMPTY_1) {
-                    validPassword = false;
-                    txtRegisterPassword.setError(getString(R.string.error_password_empty));
-                } else if (status == Validations.ERR_EMPTY_2) {
-                    validPassword = false;
-                    txtRegisterCPassword.setError(getString(R.string.error_confirm_password_empty));
-                } else if (status == Validations.ERR_NOT_MATCH) {
-                    validPassword = false;
-                    txtRegisterPassword.setError(getString(R.string.error_password_mismatch));
-                    txtRegisterCPassword.setError(getString(R.string.error_password_mismatch));
+                if (TextUtils.isEmpty(year)) {
+                    validYear = false;
+                    txtRegisterYear.setError(getString(R.string.error_year_empty));
+                } else if (Integer.parseInt(year) < 0 && Integer.parseInt(year) > 4) {
+                    validYear = false;
+                    txtRegisterYear.setError(getString(R.string.error_year));
                 } else {
-                    validPassword = true;
+                    validYear = true;
                 }
 
                 validName = !TextUtils.isEmpty(name);
 
-                if (validEmail && validUsername && validPassword &&  validName) {
+                if (validEmail && validYear && validName) {
 //                    password = SecurityUtils.getSHA1Hex(password);
-                    Staff user = new Staff(username, name, email, password, contact);
-                    String key = dbHelper.pushObject(globalClass.REF_STAFF, user);
-                    globalClass.setLoggedUser(user.setKey(key));
+                    Student user = new Student(username, name, year, faculty, batch, course, email, contact);
+                    String key = dbHelper.pushObject(globalClass.REF_STUDENTS, user);
                     Toast.makeText(StudentRegisterActivity.this, "You are successfully registered", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(StudentRegisterActivity.this, MainActivity.class);
                     StudentRegisterActivity.this.startActivity(intent);

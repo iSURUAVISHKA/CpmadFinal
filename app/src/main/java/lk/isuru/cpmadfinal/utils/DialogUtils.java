@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.utils;
+package lk.isuru.cpmadfinal.utils;
 
 import android.content.ContextWrapper;
 import android.content.DialogInterface;
@@ -19,8 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import lk.nirmalcode.cpmadfinal.R;
-import lk.nirmalcode.cpmadfinal.models.Expense;
+import lk.isuru.cpmadfinal.R;
+import lk.isuru.cpmadfinal.models.Expense;
 
 public class DialogUtils {
 

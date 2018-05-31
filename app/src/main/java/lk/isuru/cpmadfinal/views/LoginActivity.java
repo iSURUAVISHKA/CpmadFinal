@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.views;
+package lk.isuru.cpmadfinal.views;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,10 +16,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import lk.nirmalcode.cpmadfinal.R;
-import lk.nirmalcode.cpmadfinal.models.Staff;
-import lk.nirmalcode.cpmadfinal.utils.DBHelper;
-import lk.nirmalcode.cpmadfinal.utils.GlobalClass;
+import lk.isuru.cpmadfinal.R;
+import lk.isuru.cpmadfinal.models.Staff;
+import lk.isuru.cpmadfinal.utils.DBHelper;
+import lk.isuru.cpmadfinal.utils.GlobalClass;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 String username = txtLoginUsername.getText().toString();
                 final String password = txtLoginPassword.getText().toString();
-                Query query = dbHelper.getReference().child(globalClass.REF_STAFF).orderByChild("ID").equalTo(username);
+                Query query = dbHelper.getReference().child(globalClass.REF_STAFF).orderByChild("id").equalTo(username);
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {

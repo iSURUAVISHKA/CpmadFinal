@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.views;
+package lk.isuru.cpmadfinal.views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import lk.nirmalcode.cpmadfinal.R;
-import lk.nirmalcode.cpmadfinal.models.Staff;
-import lk.nirmalcode.cpmadfinal.utils.DBHelper;
-import lk.nirmalcode.cpmadfinal.utils.GlobalClass;
-import lk.nirmalcode.cpmadfinal.utils.Validations;
+import lk.isuru.cpmadfinal.R;
+import lk.isuru.cpmadfinal.models.Staff;
+import lk.isuru.cpmadfinal.utils.DBHelper;
+import lk.isuru.cpmadfinal.utils.GlobalClass;
+import lk.isuru.cpmadfinal.utils.Validations;
 
 public class RegisterActivity extends AppCompatActivity {
 

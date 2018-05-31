@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.models;
+package lk.isuru.cpmadfinal.models;
 
 public class Expense {
 

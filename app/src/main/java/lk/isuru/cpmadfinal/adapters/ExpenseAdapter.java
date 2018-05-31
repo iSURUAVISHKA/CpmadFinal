@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.adapters;
+package lk.isuru.cpmadfinal.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -17,12 +17,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
-import lk.nirmalcode.cpmadfinal.R;
-import lk.nirmalcode.cpmadfinal.models.Expense;
-import lk.nirmalcode.cpmadfinal.models.Staff;
-import lk.nirmalcode.cpmadfinal.utils.DBHelper;
-import lk.nirmalcode.cpmadfinal.utils.DateTimeUtils;
-import lk.nirmalcode.cpmadfinal.utils.GlobalClass;
+import lk.isuru.cpmadfinal.R;
+import lk.isuru.cpmadfinal.models.Expense;
+import lk.isuru.cpmadfinal.models.Staff;
+import lk.isuru.cpmadfinal.utils.DBHelper;
+import lk.isuru.cpmadfinal.utils.DateTimeUtils;
+import lk.isuru.cpmadfinal.utils.GlobalClass;
 
 public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ExpenseFeedViewHolder> {
 

@@ -35,4 +35,6 @@
     <string name="type">Type</string>
     <string name="expense_description">Description</string>
     <string name="value">Value</string>
+    <string name="batch">Batch</string>
+    <string name="course">Course</string>
 </resources>

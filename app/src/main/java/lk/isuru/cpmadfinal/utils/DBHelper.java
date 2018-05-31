@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.utils;
+package lk.isuru.cpmadfinal.utils;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

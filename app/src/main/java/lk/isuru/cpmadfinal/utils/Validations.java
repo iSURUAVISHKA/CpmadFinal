@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal.utils;
+package lk.isuru.cpmadfinal.utils;
 
 import android.text.TextUtils;
 import android.util.Patterns;

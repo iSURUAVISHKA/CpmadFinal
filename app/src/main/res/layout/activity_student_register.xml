@@ -42,13 +42,29 @@
             android:hint="@string/name"
             android:inputType="text" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/txtRegisterEmail"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_input_distance"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress" />
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtRegisterEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_distance"
+                android:layout_weight="1"
+                android:hint="@string/email"
+                android:inputType="text" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtRegisterContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_distance"
+                android:layout_weight="1"
+                android:hint="@string/contact"
+                android:inputType="number" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,181 +77,7 @@
                 android:layout_marginTop="@dimen/text_input_distance"
                 android:layout_weight="1"
                 android:hint="@string/faculty"
-                android:inputType="text
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-" />
+                android:inputType="text" />
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/txtRegisterYear"
@@ -248,27 +90,35 @@
 
         </LinearLayout>
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/txtRegisterPassword"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_input_distance"
-            android:hint="@string/password"
-            android:inputType="textPassword" />
+            android:layout_height="wrap_content">
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/txtRegisterCPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/text_input_distance"
-            android:hint="@string/password_confirm"
-            android:inputType="textPassword" />
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtRegisterBatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_distance"
+                android:layout_weight="1"
+                android:hint="@string/batch"
+                android:inputType="text" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtRegisterCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_distance"
+                android:layout_weight="1"
+                android:hint="@string/course"
+                android:inputType="number" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register"
+            android:text="Register Student"
             android:theme="@style/Widget.Design.FloatingActionButton"
             android:textColor="@color/colorButtonText" />
     </LinearLayout>

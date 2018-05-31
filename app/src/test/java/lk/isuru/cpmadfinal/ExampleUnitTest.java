@@ -1,4 +1,4 @@
-package lk.nirmalcode.cpmadfinal;
+package lk.isuru.cpmadfinal;
 
 import org.junit.Test;
 
