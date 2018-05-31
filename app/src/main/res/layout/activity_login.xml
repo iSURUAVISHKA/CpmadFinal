@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/layout_margin"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".views.LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/colorAccent" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/txtLoginUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/txtLoginPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_input_distance"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_input_distance"
+        android:text="@string/login"
+        android:textColor="@color/colorButtonText"
+        android:theme="@style/Widget.Design.FloatingActionButton" />
+
+    <CheckBox
+        android:id="@+id/chkLoginKeepLoggedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/login_keep_logged_in"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/register_note"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnRegisterNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_input_distance"
+        android:text="@string/register"
+        android:textColor="@color/colorButtonText"
+        android:theme="@style/Widget.Design.FloatingActionButton" />
+</LinearLayout>
