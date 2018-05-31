@@ -24,7 +24,7 @@ public class StudentRegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_student_register);
 
         globalClass = (GlobalClass) this.getApplication();
         dbHelper = new DBHelper();
