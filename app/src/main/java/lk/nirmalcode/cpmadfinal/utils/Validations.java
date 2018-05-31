@@ -17,10 +17,6 @@ public class Validations {
     public static int validateUsername(String username) {
         if (TextUtils.isEmpty(username))
             return ERR_EMPTY;
-        else if (username.length() != 10)
-            return ERR_INVALID;
-        else if (!Pattern.matches("[a-zA-Z][a-zA-Z][0-9]+", username))
-            return ERR_INVALID;
         else
             return VALID;
     }

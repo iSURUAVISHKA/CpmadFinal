@@ -10,6 +10,7 @@ public class GlobalClass extends Application {
 
     public final String REF_STAFF = "staffs";
     public final String REF_STUDENTS = "students";
+    public final String REF_EXPENSES = "expenses";
 
     public final String REF_KEEP_LOGGED_STATUS = "KeepLoggedStatus";
     public final String REF_KEEP_LOGGED_USER_KEY = "KeepLoggedUserKey";
